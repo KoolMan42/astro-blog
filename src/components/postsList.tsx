@@ -9,8 +9,9 @@ export function PostsList({ posts }: PostsListProps): JSX.Element {
 
 
 
-    return <ul className="hover:list-['➨'] hover:marker:text-emerald-700 list-none list-inside">
-        {posts.map((post) => <li key={post.url}><a className='text-green-500' href={post.url}> {post.frontmatter.title}</a></li>)}
+    return <ul className=" list-none">
+        {posts.map((post) =>
+            <li key={post.url}><a className="hover:before:content-['➨'] hover:marker:text-emerald-700 text-green-500" href={post.url}> {post.frontmatter.title}</a></li>)}
     </ul>
 
 }
