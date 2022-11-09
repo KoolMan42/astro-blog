@@ -16,9 +16,9 @@ const { frontmatter, url } = Astro.props;
     <!-- <link rel="canonical" href={new URL(url as string, Astro.site).pathname}> -->
     <title>{frontmatter.title}</title>
   </head>
-  <body class="bg-dark text-center">
+  <body class="bg-black text-center text-white">
     <h1 class="text-2xl">{frontmatter.title} by {frontmatter.author}</h1>
-    <main class="text-white">
+    <main>
       <slot />
     </main>
     <p>Written on: {frontmatter.date}</p>
