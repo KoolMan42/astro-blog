@@ -1,5 +1,8 @@
 ---
+layout: ../../layouts/BlogLayout.astro
 title: Hello, World
+author: Thomas Banks
+date: 12/12/12
 ---
 
 # Hi there!

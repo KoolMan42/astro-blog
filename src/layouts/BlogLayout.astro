@@ -1,6 +1,7 @@
 ---
 
 import type { MarkdownLayoutProps } from 'astro';
+import Footer from '../components/footer.svelte';
 
 type Props = MarkdownLayoutProps<{
   title: string;
@@ -12,14 +13,16 @@ const { frontmatter, url } = Astro.props;
 ---
 <html>
   <head>
-    <link rel="canonical" href={new URL(url as string, Astro.site).pathname}>
+    <!-- <link rel="canonical" href={new URL(url as string, Astro.site).pathname}> -->
     <title>{frontmatter.title}</title>
   </head>
-  <body>
-    <h1>{frontmatter.title} by {frontmatter.author}</h1>
-    <slot />
+  <body class="bg-dark text-center">
+    <h1 class="text-2xl">{frontmatter.title} by {frontmatter.author}</h1>
+    <main class="text-white">
+      <slot />
+    </main>
     <p>Written on: {frontmatter.date}</p>
-    <slot/>
+    <Footer/>
   </body>
   
 </html>
